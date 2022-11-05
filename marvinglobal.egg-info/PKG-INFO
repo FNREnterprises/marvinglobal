@@ -6,42 +6,46 @@ Home-page: UNKNOWN
 Author: jm
 Author-email: author@example.com
 License: UNKNOWN
-Description: Global Constances and Classes used throughout InMoov processes to be used to share data between marvin processes
-        use
-        
-        w10:
-        pip install -e d:\projekte\inmoov\marvinglobal
-        
-        ubuntu:
-        pip install -e /home/marvin/InMoov/marvinglobal
-        
-        to make it importable by other modules
-        
-        then use
-        
-        - import marvinglobal.marvinglobal as mg
-        - import marvinglobal.servoClasses as servoCls
-        
-        in the program
-        
-        ````puml
-        @startuml
-        class CartCommandMethods {
-            + testSensor (requestQueue, sensorId)
-            --
-            + move (requestQueue, direction:int, speed, distance, protected:bool = True)
-            --
-            + rotate (requestQueue, relAngle: int, speed)
-            --
-            + setIrSensorReferenceDistances (requestQueue, sensorId:int, distances:np.ndarray)
-            --
-            + setVerbose (requestQueue, verbose:bool)
-            }
-        @enduml
-        ````
-        
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
+
+Global Constances and Classes used throughout InMoov processes to be used to share data between marvin processes
+use
+
+w10:
+pip install -e d:\projekte\inmoov\marvinglobal
+
+ubuntu:
+pip install -e /home/marvin/InMoov/marvinglobal
+
+to make it importable by other modules
+
+then use
+
+- import marvinglobal.marvinglobal as mg
+- import marvinglobal.servoClasses as servoCls
+
+in the program
+
+In case of error message about distutils:
+sudo apt install python3.11-distutils
+````puml
+@startuml
+class CartCommandMethods {
+    + testSensor (requestQueue, sensorId)
+    --
+    + move (requestQueue, direction:int, speed, distance, protected:bool = True)
+    --
+    + rotate (requestQueue, relAngle: int, speed)
+    --
+    + setIrSensorReferenceDistances (requestQueue, sensorId:int, distances:np.ndarray)
+    --
+    + setVerbose (requestQueue, verbose:bool)
+    }
+@enduml
+````
+
+

@@ -16,6 +16,8 @@ then use
 
 in the program
 
+In case of error message about distutils:
+sudo apt install python3.11-distutils
 ````puml
 @startuml
 class CartCommandMethods {

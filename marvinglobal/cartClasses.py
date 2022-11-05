@@ -36,6 +36,25 @@ class ImuData:
     yawCorrection:float = 0
     updateTime:float = 0
 
+@dataclass
+class HeadImu:
+    yaw:float = 0
+    roll:float = 0
+    pitch:float = 0
+    yawCorrection:float = 0
+    updateTime:float = 0
+
+@dataclass
+class PlatformImu:
+    yaw:float = 0
+    roll:float = 0
+    pitch:float = 0
+    yawCorrection:float = 0
+    updateTime:float = 0
+
+@dataclass
+class Target:
+    targetX = 0
 
 @dataclass
 class Movement:
@@ -105,19 +124,19 @@ class Movement:
             move360 -= 360
         return move360
 
-
+emptyDistance = np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16)
 @dataclass
 class SensorTestData:
     sensorId:int = 0
-    distance:np.ndarray = np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16)
-    numMeasures:np.ndarray = np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int8)
-    sumMeasures:np.ndarray = np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16)
+    distance:np.ndarray = field(default_factory=lambda : np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int8))
+    numMeasures:np.ndarray = field(default_factory=lambda : np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int8))
+    sumMeasures:np.ndarray = field(default_factory=lambda:np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16))
 
 
 #@dataclass do not use dataclass as it has side effects when setting values
 class IrSensorReferenceDistance:
     def __init__(self):
-        self.distances:np.ndarray = np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16)
+        self.distances:np.ndarray = field(default_factory=lambda:np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16))
 
 class UsSensorDistance:
     def __init__(self):
