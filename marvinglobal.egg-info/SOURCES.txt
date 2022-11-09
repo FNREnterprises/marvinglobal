@@ -3,6 +3,7 @@ setup.py
 marvinglobal/__init__.py
 marvinglobal/cartClasses.py
 marvinglobal/cartCommandMethods.py
+marvinglobal/distanceSensorClasses.py
 marvinglobal/environmentClasses.py
 marvinglobal/marvinShares.py
 marvinglobal/marvinglobal.py

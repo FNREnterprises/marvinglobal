@@ -13,13 +13,12 @@ import marvinglobal.usedSharedRessources as usr
 
 SHARED_DATA_PORT = 50000
 
-SERVO_TYPE_DEFINITIONS_FILE = '/home/marvin/InMoov//marvinData/servoTypeDefinitions.json'
-SERVO_STATIC_DEFINITIONS_FILE = '/home/marvin/InMoov/marvinData/servoStaticDefinitions.json'
-SERVO_FEEDBACK_DEFINITIONS_FILE = '/home/marvin/InMoov/marvinData/servoFeedbackDefinitions.json'
-PERSISTED_SERVO_POSITIONS_FILE = '/home/marvin/InMoov//marvinData/persistedServoPositions.json'
-
 INMOOV_BASE_FOLDER = '/home/marvin/InMoov'
-PERSISTED_DATA_FOLDER = f'{INMOOV_BASE_FOLDER}/marvinData'
+SERVO_TYPE_DEFINITIONS_FILE = INMOOV_BASE_FOLDER + '/marvinData/servoTypeDefinitions.json'
+SERVO_STATIC_DEFINITIONS_FILE = INMOOV_BASE_FOLDER + '/marvinData/servoStaticDefinitions.json'
+SERVO_FEEDBACK_DEFINITIONS_FILE = INMOOV_BASE_FOLDER + '/marvinData/servoFeedbackDefinitions.json'
+PERSISTED_SERVO_POSITIONS_FILE = INMOOV_BASE_FOLDER + '/marvinData/persistedServoPositions.json'
+PERSISTED_DATA_FOLDER = INMOOV_BASE_FOLDER + '/marvinData'
 ROOM_FOLDER = 'rooms'
 
 

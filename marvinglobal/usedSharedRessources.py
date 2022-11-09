@@ -4,7 +4,7 @@ usedSharedRessources = {
     'marvinGui': [
         'processDict',
         'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         'cartDict',
         'environmentDict',
 
@@ -25,7 +25,7 @@ usedSharedRessources = {
     'skeletonControl': [
         'processDict',
         #'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         #'cartDict'
         'sharedDataUpdateQueue',
         'skeletonGuiUpdateQueue',
@@ -41,7 +41,7 @@ usedSharedRessources = {
     'cartControl': [
         'processDict',
         #'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         #'cartDict'
         'sharedDataUpdateQueue',
         #'skeletonGuiUpdateQueue',
@@ -57,7 +57,7 @@ usedSharedRessources = {
     'randomMoves': [
         'processDict',
         # 'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         # 'cartDict',
 
         'sharedDataUpdateQueue',
@@ -74,7 +74,7 @@ usedSharedRessources = {
     'playGesture': [
         'processDict',
         # 'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         'cartDict',
 
         'sharedDataUpdateQueue',
@@ -91,7 +91,7 @@ usedSharedRessources = {
     'speechControl': [
         'processDict',
         # 'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         # 'cartDict',
 
         'sharedDataUpdateQueue',
@@ -108,7 +108,7 @@ usedSharedRessources = {
     'imageProcessing': [
         'processDict',
         # 'arduinoDict',
-        # 'servoDict',
+        # 'servoStaticDict',
         'cartDict',
         'environmentDict',
 
@@ -125,7 +125,7 @@ usedSharedRessources = {
     'navManager': [
         'processDict',
         # 'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         'cartDict',
         'environmentDict',
 
@@ -143,7 +143,7 @@ usedSharedRessources = {
     'stickFigure': [
         'processDict',
         # 'arduinoDict',
-        'servoDict',
+        'servoStaticDict',
         # 'cartDict',
 
         #'sharedDataUpdateQueue',
