@@ -17,3 +17,18 @@ class FloorOffset:
     delayBetweenAnalogReads = 20
     minScanCycleDuration = 80
     finalDockingMoveDistance = 12
+
+class UsSensor:
+    def __init__(self, id):
+        self.sensorId = id
+        self.distance:np.ndarray = np.zeros((mg.NUM_US_DISTANCE_SENSORS), dtype=np.int16)
+
+class SwipingIrSensor:
+    def __init__(self, id):
+        self.sensorId = id
+        self.distance:np.ndarray = np.zeros((mg.NUM_SWIPING_IR_DISTANCE_SENSORS), dtype=np.int16)
+
+class StaticIrSensor:
+    def __init__(self, id):
+        self.sensorId = id
+        self.distance:np.ndarray = np.zeros((mg.NUM_STATIC_IR_DISTANCE_SENSORS), dtype=np.int16)

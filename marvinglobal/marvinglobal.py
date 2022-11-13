@@ -159,9 +159,17 @@ neckAngles = [{"neckAngle": pitchWallWatchDegrees, "cam": CamTypes.HEAD_CAM},
               {"neckAngle": 0, "cam": CamTypes.EYE_CAM},
               {"neckAngle": -20, "cam": CamTypes.EYE_CAM}]
 
-NUM_IR_DISTANCE_SENSORS = 10
+# swiping IR sensors
+NUM_SWIPING_IR_DISTANCE_SENSORS = 6
 NUM_SCAN_STEPS = 11
 
+# static IR sensors
+NUM_STATIC_IR_DISTANCE_SENSORS = 4
+
+# all IR sensors
+NUM_IR_DISTANCE_SENSORS = NUM_SWIPING_IR_DISTANCE_SENSORS + NUM_STATIC_IR_DISTANCE_SENSORS
+
+# ultrasonic distance sensors
 NUM_US_DISTANCE_SENSORS = 4
 MAX_US_DISTANCE = 30
 
@@ -185,6 +193,11 @@ class CartMoveBlockEvents(Enum):
     FAR_RANGE_OBSTACLE = auto()
     CLOSE_RANGE_ABYSS = auto()
     FAR_RANGE_ABYSS = auto()
+
+class DistanceSensorType(Enum):
+    US_SENSOR = auto()
+    SWIPING_IR_SENSOR = auto()
+    STATIC_IR_SENSOR = auto()
 
 CartStatus = Enum('CartStatus', 'UNKNOWN DOWN CONNECTING READY')
 

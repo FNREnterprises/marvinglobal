@@ -59,6 +59,8 @@ class ServoFeedback:
     ki = 0.0
     kd = 0.0
     degreesFactor = 1.0
+    degPerPos = 1
+    feedbackMagnetOffset = 0
     feedbackInverted = 0
 
     def updateValues(self, servoFeedbackDefinition):
@@ -68,6 +70,7 @@ class ServoFeedback:
         self.ki = servoFeedbackDefinition['ki']
         self.kd = servoFeedbackDefinition['kd']
         self.degPerPos = servoFeedbackDefinition['degPerPos']
+        #self.feedbackMagnetOffset = servoFeedbackDefinition('feedbackMagnetOffset')
         self.feedbackInverted = servoFeedbackDefinition['feedbackInverted']
 
 

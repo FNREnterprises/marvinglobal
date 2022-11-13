@@ -133,15 +133,35 @@ class SensorTestData:
     sumMeasures:np.ndarray = field(default_factory=lambda:np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16))
 
 
+#distanceSensorClasses.UsSensor(item['distanceSensorType'], item['sensorId'], item['name']))
+"""
+@dataclass
+class UsSensorProperties:
+    distanceSensorType = mg.DistanceSensorType
+    sensorId:int = 0
+    name = ""
+
+@dataclass
+class swipingIrSensorProperties:
+    distanceSensorType = 0
+    sensorId:int = 0
+    name = ""
+
+@dataclass
+class staticIrSensorProperties:
+    distanceSensorType = 0
+    sensorId:int = 0
+    name = ""
+"""
 #@dataclass do not use dataclass as it has side effects when setting values
 class IrSensorReferenceDistance:
     def __init__(self):
         self.distances:np.ndarray = field(default_factory=lambda:np.zeros((mg.NUM_SCAN_STEPS), dtype=np.int16))
-
+"""
 class UsSensorDistance:
     def __init__(self):
         self.distance:np.ndarray = np.zeros((mg.NUM_US_DISTANCE_SENSORS), dtype=np.int16)
-
+"""
 #@dataclass do not use dataclass as it has side effects when setting values
 class FloorOffset:
     def __init__(self):
